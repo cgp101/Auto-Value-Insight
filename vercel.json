@@ -1,0 +1,14 @@
+{
+    "builds": [
+    {
+        "src": "Auto-Value-Insight/app.py",
+        "use": "@vercel/python"
+    }
+],
+"routes": [
+    {
+        "src": "/(.*)",
+        "dest": "Auto-Value-Insight/app.py" 
+    }
+]
+}
