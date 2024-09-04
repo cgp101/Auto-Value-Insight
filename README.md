@@ -4,3 +4,4 @@ The app offers a straightforward, user-friendly interface for users to enter aut
 
 
 <img width="1437" alt="image" src="https://github.com/user-attachments/assets/00e9fe1b-b03a-4f54-a299-42db691d3dba">
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/bcef3526-9c0a-47be-b94f-0520199dac9e">
