@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <h1>AutoValue Insight</h1>
+    <form id="predictionForm" action="/predict" method="post">
+        <div class="row">
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+        </div>
+        <div class="row">
+            <label for="km_driven">Kilometers Driven:</label>
+            <input type="number" id="km_driven" name="km_driven" required>
+        </div>
+        <div class="row">
+            <label for="fuel">Fuel Type:</label>
+            <select id="fuel" name="fuel" required>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+                <option value="LPG">LPG</option>
+                <option value="Electric">Electric</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="seller_type">Seller Type:</label>
+            <select id="seller_type" name="seller_type" required>
+                <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+                <option value="Trustmark Dealer">Trustmark Dealer</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="transmission">Transmission Type:</label>
+            <select id="transmission" name="transmission" required>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="owner">Number of Past Owners:</label>
+            <select id="owner" name="owner" required>
+                <option value="First Owner">1</option>
+                <option value="Second Owner">2</option>
+                <option value="Third Owner">3</option>
+                <option value="Fourth & Above Owner">4</option>
+                <option value="Test Drive Car">0</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="mileage">Mileage (kmpl):</label>
+            <input type="number" id="mileage" name="mileage" step="0.1" required>
+        </div>
+        <div class="row">
+            <label for="engine">Engine (CC):</label>
+            <input type="number" id="engine" name="engine" required>
+        </div>
+        <div class="row">
+            <label for="max_power">Max Power (bhp):</label>
+            <input type="number" id="max_power" name="max_power" step="0.1" required>
+        </div>
+        <div class="row">
+            <label for="seats">Seats:</label>
+            <input type="number" id="seats" name="seats" required>
+        </div>
+        <div class="row">
+            <label for="torque_nm">Torque (Nm):</label>
+            <input type="number" id="torque_nm" name="torque_nm" required>
+        </div>
+        <div class="row">
+            <label for="torque_rpm">Torque (RPM):</label>
+            <input type="number" id="torque_rpm" name="torque_rpm" required>
+        </div>
+        <input type="submit" value="Predict">
+        <input type="reset" value="Clear Form">
+        <button type="button" onclick="window.location.href='/'">Home</button>
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
